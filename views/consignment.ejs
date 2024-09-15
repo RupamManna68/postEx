@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Shipment</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/consignment.css">
+</head>
+<body>
+    <form method="post" action="/update/id">
+        <div class="container" style="overflow-y: scroll;">
+            <aside>
+    
+                <div class="top">
+                    <div class="logo">
+                        <h2>post <span class="danger">Ex</span> </h2>
+                    </div>
+                </div>
+                <!-- end top -->
+                <div class="sidebar">
+    
+                    <a href="#">
+                        <span class="material-symbols-sharp">grid_view </span>
+                        <h3>Dashbord</h3>
+                    </a>
+                    <a href="#">
+                        <span class="material-symbols-outlined">local_shipping</span>
+                        <h3>Shipping</h3>
+                    </a>
+                    <a href="#" class="active">
+                        <span class="material-symbols-outlined">flight</span>
+                        <h3>Tracking</h3>
+                    </a>
+                    <a href="#">
+                        <span class="material-symbols-outlined">inventory_2</span>
+                        <h3>Inventory manager</h3>
+                    </a>
+                    <a href="#">
+                        <span class="material-symbols-outlined">monitoring</span>
+                        <h3>Monitoring</h3>
+                    </a>
+                    <a href="#">
+                        <span class="material-symbols-outlined">attach_money</span>
+                        <h3>Payments</h3>
+                        <a href="#">
+                            <span class="material-symbols-sharp">report_gmailerrorred </span>
+                            <h3>Reports</h3>
+                        </a>
+                        <a href="#">
+                            <span class="material-symbols-sharp">settings </span>
+                            <h3>settings</h3>
+                        </a>
+                        <a href="#">
+                            <span class="material-symbols-outlined">account_circle</span>
+                            <h3>My account</h3>
+                        </a>
+                        <a href="#">
+                            <span class="material-symbols-sharp">logout </span>
+                            <h3>logout</h3>
+                        </a>
+                </div>
+            </aside>
+            <main>
+                <div class="upper">
+                    <div class="shipment-delivery-analytics-main">
+                        <div class="shipment-delivery-analytics">
+                            <h1>Add New Shipment</h1>
+                            <div class="shipping-small">
+                                <h4>Shipping</h4>
+                                <i class="fa-solid fa-angle-right"></i>
+                                <h4>Add New Shipment</h4>
+                            </div>
+                        </div>
+                        <div class="admin-name">
+                            <i class="fa-solid fa-bell fa-2x"></i>
+                            <i class="fa-solid fa-grip-lines-vertical fa-2x"></i>
+                            <i class="fa-solid fa-circle fa-2x"></i>
+                            <div class="actual-name">
+                                <h3>Admin</h3>
+                                <h4 style="color: grey;">admin@gmail.com</h4>
+                            </div>
+                            <i class="fa-solid fa-angle-down"></i>
+                        </div>                    
+                    </div>
+                    <div class="postal-code">
+                        <div class="postal-code-left">
+                            <h3>Postal Code: 1100567</h3>
+                            <p>132/1a National Post Office, Circular Road, Kolkata</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lower">
+                    <div class="created-success">
+                        <i class="fa-solid fa-check fa-2x"></i>
+                        <h2 style="margin-left: 1rem;">Shipment Created Successfully!</h2>                    
+                    </div>
+                    <hr />
+                    <div class="lower-confirmed">
+                        <div class="lower-left">
+                            <h3>Consignment-id</h3>
+                            <textarea id="random-id" name="consg-id"></textarea>  
+                            <button id="generate-button" onclick="generateAndDisplayId()">Generate ID</button>    
+                        </div>
+                        <div class="lower-right">
+                            <button id="print">Print Details <i class="fa-solid fa-upload"></i></button>
+                            <button id="consignment-id">Send Consignment ID</button>
+                        </div>
+                    </div>                
+                </div>
+                <div class="footer">
+                    <h3>Consignment-ID sent to both Sender and Receiver</h3>
+                </div>
+            </main>
+        </div>
+        <script src="/consignment.js"></script>
+        <button id="main-button" type="submit">Buttonboy</button>
+    </form>
+</body>
+</html>

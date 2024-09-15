@@ -1,0 +1,42 @@
+const dropdowns = document.querySelectorAll('.dropdown');
+
+const openNewPage = document.getElementById('add-new-page');
+
+openNewPage.addEventListener('click',() => {
+    const newPage = window.open("http://localhost:8080/view/new");
+
+    if (newPage) {
+        newPage.focus();
+    } else {
+        alert("Please enable pop-ups in your browser settings.");
+    }
+});
+
+
+dropdowns.forEach(dropdown => {
+    const select = dropdown.querySelector('.select');
+    const caret = dropdown.querySelector('.caret');
+    const menu = dropdown.querySelector('.menu');
+    const options = dropdown.querySelectorAll('.menu li');
+    const selected = dropdown.querySelector('.selected');
+
+    select.addEventListener('click',() => {
+        select.classList.toggle('select-clicked');
+        caret.classList.toggle('caret-rotate');
+        menu.classList.toggle('menu-open');
+    });
+
+    options.forEach(option => {
+        option.addEventListener('click', () => {
+            selected.innerText = option.innerText;
+            select.classList.remove('select-clicked');
+            caret.classList.remove('caret-rotate');
+            menu.classList.remove('menu-open');
+            options.forEach(option => {
+                option.classList.remove('active');
+            });
+            option.classList.add('active');
+        });
+    });
+});
+

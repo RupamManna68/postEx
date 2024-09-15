@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Shipment</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <form method="post" action="http://localhost:8080/new/data">
+        <div class="container" style="overflow-y: scroll;">
+            <aside>
+
+                <div class="top">
+                    <div class="logo">
+                        <h2>post <span class="danger">Ex</span> </h2>
+                    </div>
+                </div>
+                <!-- end top -->
+                <div class="sidebar">
+
+                    <a href="#">
+                        <span class="material-symbols-sharp">grid_view </span>
+                        <h3>Dashbord</h3>
+                    </a>
+                    <a href="#" class="active">
+                        <span class="material-symbols-outlined">local_shipping</span>
+                        <h3>Shipping</h3>
+                    </a>
+                    <a href="#">
+                        <span class="material-symbols-outlined">flight</span>
+                        <h3>Tracking</h3>
+                    </a>
+                    <a href="#">
+                        <span class="material-symbols-outlined">monitoring</span>
+                        <h3>Monitoring</h3>
+                    </a>
+                    <a href="#">
+                        <span class="material-symbols-outlined">attach_money</span>
+                        <h3>Payments</h3>
+                    </a>
+                    <a href="#">
+                        <span class="material-symbols-sharp">report_gmailerrorred </span>
+                        <h3>Reports</h3>
+                    </a>
+                    <a href="#">
+                        <span class="material-symbols-sharp">settings </span>
+                        <h3>Settings</h3>
+                    </a>
+                    <a href="#">
+                        <span class="material-symbols-outlined">account_circle</span>
+                        <h3>Admin account</h3>
+                    </a>
+                    <a href="#">
+                        <span class="material-symbols-sharp">logout </span>
+                        <h3>Logout</h3>
+                    </a>
+                </div>
+            </aside>
+            <main>
+                <div class="upper">
+                    <div class="shipment-delivery-analytics-main">
+                        <div class="shipment-delivery-analytics">
+                            <h1>Add New Shipment</h1>
+                            <div class="shipping-small">
+                                <h4>Shipping</h4>
+                                <i class="fa-solid fa-angle-right"></i>
+                                <h4>Add New Shipment</h4>
+                            </div>
+                        </div>
+                        <div class="admin-name">
+                            <i class="fa-solid fa-bell fa-2x"></i>
+                            <i class="fa-solid fa-grip-lines-vertical fa-2x"></i>
+                            <i class="fa-solid fa-circle fa-2x"></i>
+                            <div class="actual-name">
+                                <h3>Admin</h3>
+                                <h4 style="color: grey;">admin@gmail.com</h4>
+                            </div>
+                            <i class="fa-solid fa-angle-down"></i>
+                        </div>
+                    </div>
+                    <div class="postal-code">
+                        <div class="postal-code-left">
+                            <h3>Postal Code: 1100567</h3>
+                            <p>132/1a National Post Office, Circular Road, Kolkata</p>
+                        </div>
+                        <button id="validate"><a href="http://localhost:8080/new/validate">Validate and Generate
+                                Consignment ID</a></button>
+                    </div>
+                </div>
+                <div class="lower">
+                    <div class="shipping-from-to">
+                        <div class="shipping-from">
+                            <h2>Shipping From</h2>
+                            <div id="first-form">
+                                <div class="name-mobile">
+                                    <div class="name-mobile-sender">
+                                        <label for="senderName">Sender Name:</label>
+                                        <input type="text" id="senderName" name="sender_name"
+                                            placeholder="Enter your name" required>
+                                    </div>
+                                    <div class="name-mobile-number">
+                                        <label for="mobileNumber">Mobile/Landline Number:</label>
+                                        <input type="text" id="mobileNumber" name="sender_mobile"
+                                            placeholder="Enter mobile number" required>
+                                    </div>
+                                </div>
+                                <div class="address-line">
+                                    <label for="addressLine">Address Line(House Number, Street No.,
+                                        Locality)</label><br>
+                                    <textarea id="addressLine" name="sender_address" placeholder="Enter your address"
+                                        required></textarea>
+                                </div>
+
+                                <div class="state-district">
+                                    <div class="state-name">
+                                        <label for="state">Select State:</label><br />
+                                        <select id="state" name="sender_state" required>
+                                            <option value="No State">Select your state</option>
+                                            <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                            <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                                            <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                            <option value="Assam">Assam</option>
+                                            <option value="Bihar">Bihar</option>
+                                            <option value="Chandigarh">Chandigarh</option>
+                                            <option value="Chhattisgarh">Chhattisgarh</option>
+                                            <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+                                            <option value="Daman and Diu">Daman and Diu</option>
+                                            <option value="Delhi">Delhi</option>
+                                            <option value="Lakshadweep">Lakshadweep</option>
+                                            <option value="Puducherry">Puducherry</option>
+                                            <option value="Goa">Goa</option>
+                                            <option value="Gujarat">Gujarat</option>
+                                            <option value="Haryana">Haryana</option>
+                                            <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                            <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                                            <option value="Jharkhand">Jharkhand</option>
+                                            <option value="Karnataka">Karnataka</option>
+                                            <option value="Kerala">Kerala</option>
+                                            <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                            <option value="Maharashtra">Maharashtra</option>
+                                            <option value="Manipur">Manipur</option>
+                                            <option value="Meghalaya">Meghalaya</option>
+                                            <option value="Mizoram">Mizoram</option>
+                                            <option value="Nagaland">Nagaland</option>
+                                            <option value="Odisha">Odisha</option>
+                                            <option value="Punjab">Punjab</option>
+                                            <option value="Rajasthan">Rajasthan</option>
+                                            <option value="Sikkim">Sikkim</option>
+                                            <option value="Tamil Nadu">Tamil Nadu</option>
+                                            <option value="Telangana">Telangana</option>
+                                            <option value="Tripura">Tripura</option>
+                                            <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                            <option value="Uttarakhand">Uttarakhand</option>
+                                            <option value="West Bengal">West Bengal</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="district-name">
+                                        <label for="district">Select District:</label><br />
+                                        <select id="district" name="sender_district" required>
+                                            <option value="districts">Kolkata</option>
+                                            <option value="districts">Howrah</option>
+                                            <option value="districts">Malda</option>
+                                            <option value="districts">Siliguri</option>
+                                            <option value="districts">Others</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="pin-landmark">
+                                    <div class="pin-code">
+                                        <label for="pincode">Enter Pincode:</label>
+                                        <input type="text" id="pincode" name="sender_postal_code"
+                                            placeholder="eg. 110011" required>
+                                    </div>
+                                    <div class="land-mark">
+                                        <label for="landmark">Enter Landmark:</label>
+                                        <input type="text" id="landmark" name="sender_landmark"
+                                            placeholder="Enter Landmark">
+                                    </div>
+                                </div>
+                                <button id="shipping-button">Submit</button>
+                            </div>
+                        </div>
+                        <div class="shipping-from">
+                            <h2>Shipping To</h2>
+                            <div id="second-form">
+                                <div class="name-mobile">
+                                    <div class="name-mobile-sender">
+                                        <label for="senderName">Receiver's Name :</label>
+                                        <input type="text" id="senderName" name="receiver_name"
+                                            placeholder="Enter your name" required>
+                                    </div>
+                                    <div class="name-mobile-number">
+                                        <label for="mobileNumber">Mobile/Landline Number:</label>
+                                        <input type="text" id="mobileNumber" name="receiver_mobile"
+                                            placeholder="Enter mobile number" required>
+                                    </div>
+                                </div>
+                                <div class="address-line">
+                                    <label for="addressLine">Address Line(House Number, Street No.,
+                                        Locality)</label><br>
+                                    <textarea id="addressLine" name="receiver_address" placeholder="Enter your address"
+                                        required></textarea>
+                                </div>
+
+                                <div class="state-district">
+                                    <div class="state-name">
+                                        <label for="state">Select State:</label><br />
+                                        <select id="state" name="receiver_state" required>
+                                            <option value="No State">Select your state</option>
+                                            <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                            <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                                            <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                            <option value="Assam">Assam</option>
+                                            <option value="Bihar">Bihar</option>
+                                            <option value="Chandigarh">Chandigarh</option>
+                                            <option value="Chhattisgarh">Chhattisgarh</option>
+                                            <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+                                            <option value="Daman and Diu">Daman and Diu</option>
+                                            <option value="Delhi">Delhi</option>
+                                            <option value="Lakshadweep">Lakshadweep</option>
+                                            <option value="Puducherry">Puducherry</option>
+                                            <option value="Goa">Goa</option>
+                                            <option value="Gujarat">Gujarat</option>
+                                            <option value="Haryana">Haryana</option>
+                                            <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                            <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                                            <option value="Jharkhand">Jharkhand</option>
+                                            <option value="Karnataka">Karnataka</option>
+                                            <option value="Kerala">Kerala</option>
+                                            <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                            <option value="Maharashtra">Maharashtra</option>
+                                            <option value="Manipur">Manipur</option>
+                                            <option value="Meghalaya">Meghalaya</option>
+                                            <option value="Mizoram">Mizoram</option>
+                                            <option value="Nagaland">Nagaland</option>
+                                            <option value="Odisha">Odisha</option>
+                                            <option value="Punjab">Punjab</option>
+                                            <option value="Rajasthan">Rajasthan</option>
+                                            <option value="Sikkim">Sikkim</option>
+                                            <option value="Tamil Nadu">Tamil Nadu</option>
+                                            <option value="Telangana">Telangana</option>
+                                            <option value="Tripura">Tripura</option>
+                                            <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                            <option value="Uttarakhand">Uttarakhand</option>
+                                            <option value="West Bengal">West Bengal</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="district-name">
+                                        <label for="district">Select District:</label><br />
+                                        <select id="district" name="receiver_district" required>
+                                            <option value="districts">Kolkata</option>
+                                            <option value="districts">Howrah</option>
+                                            <option value="districts">Malda</option>
+                                            <option value="districts">Siliguri</option>
+                                            <option value="districts">Others</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="pin-landmark">
+                                    <div class="pin-code">
+                                        <label for="pincode">Enter Pincode:</label>
+                                        <input type="text" id="pincode" name="receiver_postal_code"
+                                            placeholder="eg. 110011" required>
+                                    </div>
+                                    <div class="land-mark">
+                                        <label for="landmark">Enter Landmark:</label>
+                                        <input type="text" id="landmark" name="receiver_landmark"
+                                            placeholder="Enter Landmark" required>
+                                    </div>
+                                </div>
+                                <button id="shipping-button">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="package-details">
+                        <h2>Package Details</h2>
+                        <div id="third-form">
+                            <div class="package-details-upper">
+                                <div class="package-item-selection">
+                                    <label for="item">Select an item:</label><br />
+                                    <select id="item" name="package_item">
+                                        <option value="Inland Letter Card">Inland Letter Card</option>
+                                        <option value="Inland Letter Card">Speed Post</option>
+                                        <option value="Inland Letter Card">Parcel</option>
+                                        <option value="Inland Letter Card">Others</option>
+                                    </select>
+                                </div>
+                                <div class="number-of-items" id="items">
+                                    <label for="numberOfItems">Number of items:</label>
+                                    <input type="number" id="numberOfItems" name="number_of_items">
+                                </div>
+
+                                <div class="weight-of-items" id="items">
+                                    <label for="weight">Weight (gms):</label>
+                                    <input type="number" id="weight" name="item_weight">
+                                </div>
+
+                                <div class="length-of-items" id="items">
+                                    <label for="length">Length (cm):</label>
+                                    <input type="number" id="length" name="item_length">
+                                </div>
+
+                                <div class="width-of-items" id="items">
+                                    <label for="width">Width (cm):</label>
+                                    <input type="number" id="width" name="item_width">
+                                </div>
+
+                                <div class="height-of-items" id="items">
+                                    <label for="height">Height (cm):</label>
+                                    <input type="number" id="height" name="item_height">
+                                </div>
+                            </div>
+                            <div class="package-details-lower">
+                                <label for="content-desc">Content Descriptions</label><br />
+                                <textarea id="content-desc" name="content_desc"
+                                    placeholder="For domestic parcels, this might be limited to whether it's documents, merchandise, or fragile items"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="types-of-service">
+                        <h2>Type of Service</h2>
+                        <div id="fourth-form">
+                            <div>
+                                <label for="typeOfService">Type of Service:</label><br />
+                                <select id="typeOfService" name="service_type">
+                                    <option value="Speed Post">Speed Post</option>
+                                    <option value="Speed Post">Inland</option>
+                                    <option value="Speed Post">Others</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="additionalService">Additional Service:</label><br />
+                                <select id="additionalService" name="additional_service">
+                                    <option value="Fragile Handling">Fragile Handling</option>
+                                    <option value="Fragile Handling">Others</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="typeOfDelivery">Type of Delivery:</label><br />
+                                <select id="typeOfDelivery" name="delivery_type">
+                                    <option value="Domestic">Domestic</option>
+                                    <option value="Domestic">Within State</option>
+                                    <option value="Domestic">International</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="totalAmount">Total Amount:</label>
+                                <input type="text" id="totalAmount" name="total_amount" placeholder="Amount">
+                            </div>
+
+                            <div>
+                                <label for="modeOfPayment">Mode of Payment:</label><br />
+                                <select id="modeOfPayment" name="mode_of_payment">
+                                    <option value="Cash">Cash</option>
+                                    <option value="Cash">Online</option>
+                                    <option value="Cash">Others</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="delivery-time-slot">
+                        <h2>Select Delivery Time Slot</h2>
+                        <div id="fifth-form">
+                            <div class="estimated-delivery-time">
+                                <label for="estimatedDeliveryTime">Estimated Delivery Time:</label>
+                                <input type="text" id="estimatedDeliveryTime" name="estd_delivery_date">
+                            </div>
+                            <div class="change-date">
+                                <label for="changeDate">Change Date:</label><br />
+                                <select id="changeDate" name="change_date">
+                                    <option value="12 September 2024">12 September 2024</option>
+                                </select>
+                            </div>
+                            <div class="select-time">
+                                <label for="selectTime">Select Time:</label><br />
+                                <select id="selectTime" name="time_of_delivery">
+                                    <option value="09:00-10:00">09:00</option>
+                                    <option value="11:00-13:00">11:00</option>
+                                    <option value="15:00-17:00">15:00</option>
+                                    <option value="18:00-19:00">18:00</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="special-instructions">
+                        <h2>Any Special Instructions(if applicable)</h2>
+                        <textarea name="special_instructions" id="instruct" rows="3" style="width: 100%;"
+                            placeholder="Any special instructions provided by sender like 'Handle with Care', 'Do Not Bend', etc"></textarea>
+                    </div>
+                    <button id="main-button" type="submit">Submit Page</button>
+                </div>
+            </main>
+        </div>
+
+    </form>
+    <script src="newshipping.js"></script>
+</body>
+
+</html>

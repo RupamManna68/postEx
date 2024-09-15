@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALL USERS</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Package Item</th>
+            <th>Service Type</th>
+            <th>Shipper Date</th>
+            <th>Departure</th>
+            <th>Destination</th>
+            <th>Weight</th>
+            <th>Status</th>
+        </tr>
+        <% for(user of users) { %>
+            <tr>
+                <td><%= user.id %></td>
+                <td><%= user.package_item %></td>
+                <td><%= user.service_type %></td>
+                <td><%= user.estd_delivery_date %></td>
+                <td><%= user.sender_district %></td>
+                <td><%= user.receiver_district %></td>
+                <td><%= user.item_weight %></td>
+                <td>Just Ordered</td>
+            </tr>
+        <% } %>
+        
+
+    </table>
+</body>
+</html>
+

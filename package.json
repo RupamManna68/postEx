@@ -1,0 +1,21 @@
+{
+  "name": "backend-project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rupam Manna",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "kmeans": "^0.0.1",
+    "method-override": "^3.0.0",
+    "moment": "^2.30.1",
+    "mysql2": "^3.11.0",
+    "uuid": "^10.0.0"
+  }
+}
